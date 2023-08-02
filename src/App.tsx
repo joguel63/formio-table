@@ -1,7 +1,7 @@
-import { ApiColumns, TableProvider, ColumnsComponents } from "./lib/formio-table";
-import { ActionButtonsComponent, CheckComponent } from "./components";
+import { ApiColumns, TableProvider } from "./lib/formio-table";
 import Columns from "./columns.json";
 import { Pet } from "./types";
+import { TableMaster } from "./components";
 
 const rows: Pet[] = [
   {
@@ -116,19 +116,16 @@ const rows: Pet[] = [
   },
 ];
 
-const columnsComponents: ColumnsComponents = {
-  ActionsComponent: ActionButtonsComponent,
-  CheckComponent: CheckComponent,
-};
-
 function App() {
   return (
-    <TableProvider
-      rows={rows}
-      columns={Columns.components[0]?.components as ApiColumns[]}
-      tableProps={{ getRowId: (row: Pet) => row.name, autoHeight: true }}
-      columnsComponents={columnsComponents}
-    />
+    <TableProvider rows={rows}>
+      <TableMaster
+        columns={Columns.components[0]?.components as ApiColumns[]}
+        rows={rows}
+        getRowId={(row: Pet) => row.name}
+        autoHeight
+      />
+    </TableProvider>
   );
 }
 

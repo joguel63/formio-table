@@ -161,7 +161,7 @@
             { "attr": "flex", "value": "1" },
             { "attr": "type", "value": "action" }
           ],
-          "content": "view,delete",
+          "content": "view,delete,edit",
           "refreshOnChange": false,
           "key": "actions",
           "type": "htmlelement",
