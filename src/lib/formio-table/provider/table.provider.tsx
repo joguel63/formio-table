@@ -5,7 +5,7 @@ import { ApiColumns, ColumnsComponents, useColumns } from "..";
 
 type ProviderProps = {
   rows: Object[];
-  columns: ApiColumns[];
+  columns?: ApiColumns[];
   columnsComponents?: ColumnsComponents;
   children?: React.ReactNode;
   tableProps?: Omit<DataGridProps, "rows" | "columns">;
@@ -23,7 +23,9 @@ export const TableProvider: React.FC<ProviderProps> = ({
 
   return (
     <TableContext.Provider value={{ rows, setRows }}>
-      {!children && <DataGrid {...tableProps} rows={rows} columns={getColumns(columns)} />}
+      {!children && columns && (
+        <DataGrid {...tableProps} rows={rows} columns={getColumns(columns)} />
+      )}
       {!!children && children}
     </TableContext.Provider>
   );
