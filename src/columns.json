@@ -1,0 +1,185 @@
+{
+  "_id": "6480d8b81347827455e639d8",
+  "title": "Tablas test",
+  "name": "tablasTest",
+  "path": "tablastest",
+  "type": "form",
+  "display": "form",
+  "tags": [],
+  "access": [
+    { "type": "create_own", "roles": [] },
+    { "type": "create_all", "roles": [] },
+    { "type": "read_own", "roles": [] },
+    {
+      "type": "read_all",
+      "roles": ["6480d851e823dd692ef87f95", "6480d851e823dd692ef87f99", "6480d851e823dd692ef87f9d"]
+    },
+    { "type": "update_own", "roles": [] },
+    { "type": "update_all", "roles": [] },
+    { "type": "delete_own", "roles": [] },
+    { "type": "delete_all", "roles": [] },
+    { "type": "team_read", "roles": [] },
+    { "type": "team_write", "roles": [] },
+    { "type": "team_admin", "roles": [] }
+  ],
+  "submissionAccess": [
+    { "type": "create_own", "roles": [] },
+    { "type": "create_all", "roles": [] },
+    { "type": "read_own", "roles": [] },
+    { "type": "read_all", "roles": [] },
+    { "type": "update_own", "roles": [] },
+    { "type": "update_all", "roles": [] },
+    { "type": "delete_own", "roles": [] },
+    { "type": "delete_all", "roles": [] },
+    { "type": "team_read", "roles": [] },
+    { "type": "team_write", "roles": [] },
+    { "type": "team_admin", "roles": [] }
+  ],
+  "owner": "6273e3eda9510b9a9c7b7fd7",
+  "components": [
+    {
+      "label": "Mascotas",
+      "reorder": false,
+      "addAnotherPosition": "bottom",
+      "layoutFixed": false,
+      "enableRowGroups": false,
+      "initEmpty": false,
+      "tableView": false,
+      "defaultValue": [{}],
+      "key": "mascotas",
+      "type": "datagrid",
+      "input": true,
+      "components": [
+        {
+          "label": "Nombre",
+          "attrs": [
+            { "attr": "field", "value": "name" },
+            { "attr": "headerName", "value": "Nombre" },
+            { "attr": "flex", "value": "1" },
+            { "attr": "type", "value": "simple" }
+          ],
+          "content": "Nombre",
+          "refreshOnChange": false,
+          "key": "nombre",
+          "type": "htmlelement",
+          "input": false,
+          "tableView": false
+        },
+        {
+          "label": "Raza",
+          "attrs": [
+            { "attr": "field", "value": "breed" },
+            { "attr": "headerName", "value": "Raza" },
+            { "attr": "flex", "value": "1" },
+            { "attr": "type", "value": "simple" }
+          ],
+          "refreshOnChange": false,
+          "key": "nombre1",
+          "type": "htmlelement",
+          "input": false,
+          "tableView": false
+        },
+        {
+          "label": "Peso",
+          "attrs": [
+            { "attr": "field", "value": "weight" },
+            { "attr": "headerName", "value": "Peso" },
+            { "attr": "flex", "value": "0.4" },
+            { "attr": "type", "value": "simple" }
+          ],
+          "refreshOnChange": false,
+          "key": "nombre2",
+          "type": "htmlelement",
+          "input": false,
+          "tableView": false
+        },
+        {
+          "label": "Dueño",
+          "attrs": [
+            { "attr": "field", "value": "owner" },
+            { "attr": "headerName", "value": "Dueño" },
+            { "attr": "flex", "value": "1" },
+            { "attr": "type", "value": "simple" }
+          ],
+          "content": "Dueño",
+          "refreshOnChange": false,
+          "key": "nombre3",
+          "type": "htmlelement",
+          "input": false,
+          "tableView": false
+        },
+        {
+          "label": "Direccion",
+          "attrs": [
+            { "attr": "field", "value": "street" },
+            { "attr": "headerName", "value": "Direccion" },
+            { "attr": "type", "value": "multiple" },
+            { "attr": "flex", "value": "1" }
+          ],
+          "content": "🏠{{city}}, {{street}}, {{houseNumber}}",
+          "refreshOnChange": false,
+          "key": "direccion",
+          "type": "htmlelement",
+          "input": false,
+          "tableView": false
+        },
+        {
+          "label": "Active",
+          "attrs": [
+            { "attr": "field", "value": "active" },
+            { "attr": "headerName", "value": "Activo" },
+            { "attr": "flex", "value": "0.3" },
+            { "attr": "type", "value": "check" }
+          ],
+          "content": "active",
+          "refreshOnChange": false,
+          "key": "actions",
+          "type": "htmlelement",
+          "input": false,
+          "tableView": false
+        },
+        {
+          "label": "Cancel",
+          "attrs": [
+            { "attr": "field", "value": "cancel" },
+            { "attr": "headerName", "value": "Cancelar" },
+            { "attr": "flex", "value": "0.3" },
+            { "attr": "type", "value": "check" }
+          ],
+          "content": "cancel",
+          "refreshOnChange": false,
+          "key": "actions",
+          "type": "htmlelement",
+          "input": false,
+          "tableView": false
+        },
+        {
+          "label": "Actions",
+          "attrs": [
+            { "attr": "field", "value": "actions" },
+            { "attr": "headerName", "value": "Acciones" },
+            { "attr": "flex", "value": "1" },
+            { "attr": "type", "value": "action" }
+          ],
+          "content": "view,delete",
+          "refreshOnChange": false,
+          "key": "actions",
+          "type": "htmlelement",
+          "input": false,
+          "tableView": false
+        }
+      ]
+    }
+  ],
+  "settings": {},
+  "properties": {},
+  "project": "6480d851e823dd692ef87f8e",
+  "controller": "",
+  "revisions": "",
+  "submissionRevisions": "",
+  "_vid": 0,
+  "created": "2023-06-07T19:21:28.901Z",
+  "modified": "2023-06-08T22:46:42.110Z",
+  "machineName": "ouywzprpnjmjpqr:tablasTest",
+  "plan": "archived"
+}
